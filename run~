@@ -1,0 +1,18 @@
+#!/bin/bash
+
+
+echo "MAKING (just incase)"
+make clean
+make
+
+echo "ADDING requirements.txt"
+find modules/ -name "*.*" > requirement.txt
+
+echo "COMPILING"
+iverilog processor.v -c requirement.txt
+
+echo "RUNNING"
+./a.out
+
+echo "COMPLETED"
+

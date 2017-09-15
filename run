@@ -1,0 +1,19 @@
+#!/bin/bash
+export PATH=$PATH:/usr/remote/mipsel/bin
+
+echo "MAKING (just incase)"
+make clean
+make
+
+echo "ADDING requirements.txt"
+find modules/ -name "*.*" > requirement.txt
+
+echo "COMPILING"
+iverilog ProcessorTestBench.v -c requirement.txt
+
+echo "RUNNING PROCESSOR"
+echo "----------------"
+./a.out
+echo "----------------"
+echo "COMPLETED"
+

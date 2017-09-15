@@ -1,0 +1,12 @@
+modules/mips.h
+modules/shifts.v
+modules/adders.v
+modules/alu.v
+modules/control.v
+modules/registers.v
+modules/global_mux.v
+modules/basicOps.v
+modules/PC.v
+modules/data_memory.v
+modules/sysCall.v
+modules/instructionMemory.v
